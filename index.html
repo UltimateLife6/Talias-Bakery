@@ -14,7 +14,7 @@
   <link rel="canonical" href="https://www.taliasbakery.com/">
   <link rel="stylesheet" href="styles.css">
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script type="application/ld+json">
@@ -45,10 +45,9 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
-        <i class="fas fa-bread-slice logo-icon" aria-hidden="true"></i>
-        <span class="logo-text">Talia's Bakery</span>
-      </div>
+      <a href="#home" class="nav-logo">
+        <img src="img/talias-bakery-logo.png" alt="Talia's Bakery" class="logo-img">
+      </a>
       <ul class="nav-menu">
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
@@ -58,7 +57,8 @@
         <li><a href="#reviews" class="nav-link">Reviews</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <div class="hamburger">
+      <a href="tel:+19086894100" class="btn btn-nav-cta">Call to Order</a>
+      <div class="hamburger" aria-label="Toggle menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -68,16 +68,18 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Washington, NJ's Family-Run Bakery</h1>
-      <p class="hero-subtitle">Fresh breads, pastries, cakes, gelato, and specialty coffee — baked with care by a family that loves this community.</p>
-      <div class="hero-buttons">
-        <a href="menu-pricing.html" class="btn btn-primary">View Menu</a>
-        <a href="tel:+19086894100" class="btn btn-secondary">Call to Order</a>
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Washington, New Jersey</p>
+        <h1 class="hero-title">Washington, NJ's <span class="script-accent">Family-Run</span> Bakery</h1>
+        <div class="hero-divider"><span>♥</span></div>
+        <p class="hero-subtitle">Fresh breads, pastries, cakes, gelato, and specialty coffee — baked with care by a family that loves this community.</p>
+        <div class="hero-buttons">
+          <a href="menu-pricing.html" class="btn btn-primary">View Menu</a>
+          <a href="tel:+19086894100" class="btn btn-secondary">Call to Order</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="new-portfolio/IMG_5588.jpeg" alt="Fresh pastries and breads at Talia's Bakery">
     </div>
   </section>
 
@@ -86,16 +88,14 @@
     <div class="container">
       <div class="about-content">
         <div class="about-text">
-          <h2 class="section-title">About Talia's Bakery</h2>
+          <h2 class="section-title">Baked with Family, Shared with Love.</h2>
           <p class="about-description">
             Talia's Bakery is a family-owned, family-run bakery in the heart of Washington, NJ. We opened our doors
-            to serve our hometown with the kind of baking you remember — authentic Italian pastries, fresh daily bread,
-            custom celebration cakes, and warm welcomes at the counter.
+            to serve our hometown with fresh breads, international baked goods, authentic Italian pastries, and warm welcomes at the counter.
           </p>
           <p class="about-description">
-            From Italian cookies and muffins to Middle Eastern delights, pita bread, gelato, and specialty coffee,
-            everything is made with pride. Need something special? We welcome custom cake orders and specialty bakery
-            requests — just ask our family.
+            From daily breads and muffins to Middle Eastern delights, pita bread, gelato, and specialty coffee,
+            everything is made with pride. We welcome custom cake orders and specialty bakery requests — just ask our family.
           </p>
           <div class="about-stats">
             <div class="stat">
@@ -112,8 +112,8 @@
             </div>
           </div>
         </div>
-        <div class="about-image">
-          <img src="portfolio-images/IMG_5746.JPG" alt="Talia's Bakery storefront and fresh bakes">
+        <div class="about-image about-image-card">
+          <img src="img/talias-bakery-logo.png" alt="Talia's Bakery logo">
         </div>
       </div>
     </div>
@@ -122,7 +122,7 @@
   <!-- Services Section -->
   <section id="services" class="services">
     <div class="container">
-      <h2 class="section-title text-center">Our Bakery</h2>
+      <h2 class="section-title text-center">Made Fresh. Made for You.</h2>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">
@@ -136,7 +136,7 @@
           <div class="service-icon">
             <i class="fas fa-birthday-cake"></i>
           </div>
-          <h3>Custom Cakes & Celebration Desserts</h3>
+          <h3>Custom Cakes & Celebrations</h3>
           <p>Beautiful custom cakes for birthdays, weddings, and every celebration. Tell us your vision and we'll bring it to life.</p>
           <a href="custom-cakes.html" class="service-link">Order a Custom Cake</a>
         </div>
@@ -179,7 +179,7 @@
   <!-- Gallery Section -->
   <section id="portfolio" class="portfolio">
     <div class="container">
-      <h2 class="section-title text-center">Fresh from the Bakery</h2>
+      <h2 class="section-title text-center">Made Today. Enjoyed Today.</h2>
       <p class="section-subtitle text-center">A taste of what we bake fresh every day in Washington, NJ</p>
       <div class="portfolio-filters">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -262,6 +262,9 @@
           </div>
         </div>
       </div>
+      <div class="gallery-cta text-center">
+        <a href="#portfolio" class="btn btn-secondary">View Full Gallery</a>
+      </div>
     </div>
   </section>
 
@@ -280,7 +283,7 @@
             <i class="fas fa-star"></i>
           </div>
           <img src="review-images/IMG_4078.jpeg" alt="Custom birthday cake"
-            style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"
+            class="review-image"
             onclick="openImageModal('review-images/IMG_4078.jpeg', 'Custom Birthday Cake')">
           <p class="review-text">
             "The custom birthday cake was beautiful and delicious — everyone at the party asked where we got it.
@@ -303,7 +306,7 @@
             <i class="fas fa-star"></i>
           </div>
           <img src="review-images/IMG_4143.jpeg" alt="Italian pastries"
-            style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"
+            class="review-image"
             onclick="openImageModal('review-images/IMG_4143.jpeg', 'Italian Pastries')">
           <p class="review-text">
             "The Italian pastries taste like my grandmother's kitchen — authentic, fresh, and absolutely worth the trip.
@@ -326,7 +329,7 @@
             <i class="fas fa-star"></i>
           </div>
           <img src="portfolio-images/IMG_5749.JPG" alt="Fresh bread"
-            style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"
+            class="review-image"
             onclick="openImageModal('portfolio-images/IMG_5749.JPG', 'Fresh Bread')">
           <p class="review-text">
             "Best fresh bread in Washington, NJ. We stop in every weekend for a loaf and end up leaving with pastries too.
@@ -349,7 +352,7 @@
             <i class="fas fa-star"></i>
           </div>
           <img src="review-images/IMG_1383.jpeg" alt="Italian cookies"
-            style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"
+            class="review-image"
             onclick="openImageModal('review-images/IMG_1383.jpeg', 'Italian Cookies')">
           <p class="review-text">
             "The custard and cookies are outstanding — you can taste the quality in every bite.
@@ -363,45 +366,6 @@
           </div>
         </div>
 
-        <div class="review-card">
-          <div class="review-stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">
-            "Ordered a custom cake for my daughter's 16th birthday and they nailed the design.
-            Friendly family service from start to finish — they listened to every detail."
-          </p>
-          <div class="review-author">
-            <div class="author-info">
-              <h4>Patricia K.</h4>
-              <span>Custom Celebration Cake</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">
-            "The cheese pockets alone are worth the visit. Warm, welcoming, and everything tastes homemade.
-            So glad we have a real bakery like this in Warren County."
-          </p>
-          <div class="review-author">
-            <div class="author-info">
-              <h4>David S.</h4>
-              <span>Cheese Pockets & Pastries</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -579,8 +543,8 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-section">
-          <h3>Talia's Bakery</h3>
+        <div class="footer-section footer-brand">
+          <img src="img/talias-bakery-logo.png" alt="Talia's Bakery" class="footer-logo">
           <p>Family-owned bakery serving Washington, NJ with fresh breads, pastries, cakes, and more.</p>
           <div class="social-links">
             <a href="https://www.facebook.com/people/Talias-Bakery/61550837957189/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
@@ -604,6 +568,8 @@
             <li>217 W Washington Ave</li>
             <li>Washington, NJ 07882</li>
             <li><a href="tel:+19086894100">(908) 689-4100</a></li>
+            <li>Mon–Sat: 7:00 AM – 6:00 PM</li>
+            <li>Sun: 8:00 AM – 3:00 PM</li>
           </ul>
         </div>
       </div>

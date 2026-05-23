@@ -33,10 +33,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
   if (window.scrollY > 100) {
-    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+    navbar.style.background = 'rgba(5, 5, 5, 0.98)';
+    navbar.style.boxShadow = '0 4px 30px rgba(255, 79, 184, 0.15)';
   } else {
-    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+    navbar.style.background = 'rgba(5, 5, 5, 0.92)';
     navbar.style.boxShadow = 'none';
   }
 });
@@ -356,7 +356,7 @@ style.textContent = `
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #FAF6F0 0%, #F0E6D8 100%);
+        background: linear-gradient(135deg, #050505 0%, #0b0b0b 100%);
         z-index: 9999;
         display: flex;
         align-items: center;
@@ -372,7 +372,7 @@ style.textContent = `
         font-family: 'Playfair Display', serif;
         font-size: 2rem;
         font-weight: 700;
-        color: #2c1810;
+        color: #ffffff;
         z-index: 10000;
     }
     
