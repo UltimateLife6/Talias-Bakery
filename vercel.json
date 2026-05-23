@@ -1,0 +1,40 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/Portfolio.html",
+      "destination": "/index.html#portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/Inquiry-form.html",
+      "destination": "/index.html#contact",
+      "permanent": true
+    },
+    {
+      "source": "/Order and Pickup.html",
+      "destination": "/index.html#contact",
+      "permanent": true
+    },
+    {
+      "source": "/Order%20and%20Pickup.html",
+      "destination": "/index.html#contact",
+      "permanent": true
+    },
+    {
+      "source": "/Weekly-Bakesale-Order.html",
+      "destination": "/menu-pricing.html",
+      "permanent": true
+    },
+    {
+      "source": "/party-packeges.html",
+      "destination": "/party-packages.html",
+      "permanent": true
+    }
+  ]
+}

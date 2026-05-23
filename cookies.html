@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Italian Cookies - Talia's Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+            <div class="nav-logo">
+        <i class="fas fa-bread-slice logo-icon" aria-hidden="true"></i>
+        <span class="logo-text">Talia's Bakery</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="menu-pricing.html" class="nav-link">Bakery Menu</a></li>
+        <li><a href="custom-cakes.html" class="nav-link">Custom Cakes</a></li>
+        <li><a href="index.html#portfolio" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Cookies</h1>
+        <p class="page-hero-subtitle">Handcrafted cookies using time-honored techniques and the finest ingredients</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cookie Flavors & Pricing Section -->
+  <section class="cookie-pricing-section">
+    <div class="container">
+      <h2 class="section-title text-center">Cookie Flavors & Pricing</h2>
+      <div class="cookie-pricing-content" style="display: flex; justify-content: center; align-items: center;">
+        <div class="cookie-pricing-image">
+          <img src="menu-img/IMG_6433.png" alt="Cookie Flavors and Pricing Guide"
+            style="width: 100%; max-width: 700px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); cursor: pointer;"
+            onclick="openImageModal('menu-img/IMG_6433.png', 'Cookie Flavors and Pricing Guide')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Baking Schedule Section 
+  /*<section class="baking-schedule">
+    <div class="container">
+      <h2 class="section-title text-center">Baking Schedule</h2>
+      <div class="schedule-grid">
+        <div class="schedule-day">
+          <h3>Monday</h3>
+          <ul>
+            <li>Sourdough</li>
+            <li>Whole Wheat</li>
+            <li>Multigrain</li>
+          </ul>
+        </div>
+        <div class="schedule-day">
+          <h3>Tuesday</h3>
+          <ul>
+            <li>Sourdough</li>
+            <li>Dark Rye</li>
+            <li>Ciabatta</li>
+          </ul>
+        </div>
+        <div class="schedule-day">
+          <h3>Wednesday</h3>
+          <ul>
+            <li>Sourdough</li>
+            <li>Herb Focaccia</li>
+            <li>Whole Wheat</li>
+          </ul>
+        </div>
+        <div class="schedule-day">
+          <h3>Thursday</h3>
+          <ul>
+            <li>Sourdough</li>
+            <li>Dark Rye</li>
+            <li>Baguette</li>
+          </ul>
+        </div>
+        <div class="schedule-day">
+          <h3>Friday</h3>
+          <ul>
+            <li>Sourdough</li>
+            <li>Challah</li>
+            <li>Herb Focaccia</li>
+          </ul>
+        </div>
+        <div class="schedule-day">
+          <h3>Saturday</h3>
+          <ul>
+            <li>Sourdough</li>
+            <li>Brioche</li>
+            <li>Whole Wheat</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- Order Section -->
+  <section class="order-section">
+    <div class="container">
+      <div class="order-content">
+        <div class="order-info">
+          <h2 class="section-title">Order Fresh Cookies</h2>
+          <p class="order-description">
+            Pre-order your favorite cookies to ensure availability.
+            All cookies are baked fresh daily and available for pickup after 8 AM.
+          </p>
+          <div class="order-features">
+            <div class="feature">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Fresh Daily</h4>
+                <p>Baked fresh every morning</p>
+              </div>
+            </div>
+            <div class="feature">
+              <i class="fas fa-calendar-alt"></i>
+              <div>
+                <h4>Pre-orders</h4>
+                <p>Order up to 3 days in advance</p>
+              </div>
+            </div>
+            <div class="feature">
+              <i class="fas fa-leaf"></i>
+              <div>
+                <h4>Natural Ingredients</h4>
+                <p>No preservatives or artificial ingredients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-form">
+          <form id="order-form" onsubmit="submitOrder(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="order-name">Name *</label>
+                <input type="text" id="order-name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="order-email">Email *</label>
+                <input type="email" id="order-email" name="email" placeholder="your.email@example.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="order-phone">Phone *</label>
+                <input type="tel" id="order-phone" name="phone" placeholder="(908) 689-4100" required>
+              </div>
+              <div class="form-group">
+                <label for="order-date">Pickup Date *</label>
+                <input type="date" id="order-date" name="pickup-date" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="order-quantity">Count *</label>
+              <input type="number" id="order-quantity" name="quantity" placeholder="How many cookies?" min="1" required>
+            </div>
+            <div class="form-group">
+              <label for="order-notes">Special Requests</label>
+              <textarea id="order-notes" name="notes" placeholder="Any special requests or dietary restrictions..."
+                rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Submit Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Talia's Bakery</h3>
+          <p>Family-owned bakery serving Washington, NJ with fresh breads, pastries, cakes, and more.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/people/Talias-Bakery/61550837957189/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+19086894100" aria-label="Call Talia's Bakery"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Our Bakery</h4>
+          <ul>
+            <li><a href="menu-pricing.html">Bakery Menu</a></li>
+            <li><a href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a href="index.html#portfolio">Gallery</a></li>
+            <li><a href="index.html#contact">Order Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Visit Us</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+            <li>217 W Washington Ave</li>
+            <li>Washington, NJ 07882</li>
+            <li><a href="tel:+19086894100">(908) 689-4100</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Talia's Bakery. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <h3 id="modalTitle"></h3>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+  <script>
+
+    // Order form submission
+    async function submitOrder(e) {
+      e.preventDefault();
+
+      const form = document.getElementById('order-form');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+
+      // Show loading state
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.disabled = true;
+
+      try {
+        // Get form data
+        const formData = new FormData(form);
+        const orderData = {
+          service: 'cookie-order',
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          pickup_date: formData.get('pickup-date'),
+          quantity: formData.get('quantity'),
+          notes: formData.get('notes'),
+          timestamp: new Date().toISOString(),
+          status: 'new'
+        };
+
+        // Submit to Firebase
+        const result = await firebaseService.submitInquiry(orderData);
+
+        showNotification('Thank you! Your order has been sent successfully. We\'ll contact you within 24 hours.', 'success');
+        form.reset();
+
+      } catch (error) {
+        console.error('Firebase Error:', error);
+        showNotification('Sorry, there was an error sending your order. Please try again.', 'error');
+      } finally {
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    }
+
+    function showNotification(message, type) {
+      // Create notification element
+      const notification = document.createElement('div');
+      notification.className = `notification ${type}`;
+      notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+        z-index: 10000;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      `;
+
+      if (type === 'success') {
+        notification.style.backgroundColor = '#27ae60';
+      } else {
+        notification.style.backgroundColor = '#e74c3c';
+      }
+
+      notification.textContent = message;
+      document.body.appendChild(notification);
+
+      // Animate in
+      setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+      }, 100);
+
+      // Remove after 5 seconds
+      setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+          }
+        }, 300);
+      }, 5000);
+    }
+
+    // Image Modal Functions
+    function openImageModal(imageSrc, imageTitle) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+
+      modalImage.src = imageSrc;
+      modalImage.alt = imageTitle;
+      modalTitle.textContent = imageTitle;
+
+      modal.classList.add('show');
+      modal.style.display = 'block';
+
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('show');
+      modal.style.display = 'none';
+
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking on the close button or outside the modal
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('imageModal');
+      const closeBtn = document.querySelector('.close-modal');
+
+      closeBtn.addEventListener('click', closeImageModal);
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          closeImageModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          closeImageModal();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

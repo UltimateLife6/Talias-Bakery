@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Cakes - Talia's Bakery | Washington, NJ</title>
+  <meta name="description" content="Custom celebration cakes from Talia's Bakery in Washington, NJ. Birthdays, weddings, and specialty orders — call (908) 689-4100.">
+  <meta name="keywords" content="custom cakes Washington NJ, Talia's Bakery, celebration cakes Warren County">
+  <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+            <div class="nav-logo">
+        <i class="fas fa-bread-slice logo-icon" aria-hidden="true"></i>
+        <span class="logo-text">Talia's Bakery</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="menu-pricing.html" class="nav-link">Bakery Menu</a></li>
+        <li><a href="custom-cakes.html" class="nav-link active">Custom Cakes</a></li>
+        <li><a href="index.html#portfolio" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">Custom Cakes</h1>
+        <p class="page-hero-subtitle">Celebration cakes crafted to your vision — birthdays, weddings, and every special occasion in Washington, NJ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cake Sizes Section -->
+  <section class="cake-sizes">
+    <div class="container">
+      <h2 class="section-title text-center">Cake Sizes & Pricing</h2>
+      <div class="cake-sizes-content" style="display: flex; justify-content: center; align-items: center;">
+        <div class="cake-size-image">
+          <img src="menu-img/LeoGoddess-2.png" alt="Cake Sizes and Serving Guide"
+            style="width: 100%; max-width: 600px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); cursor: pointer;"
+            onclick="openImageModal('menu-img/LeoGoddess-2.png', 'Cake Sizes and Serving Guide')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cake Flavors Section -->
+  <section class="cake-flavors">
+    <div class="container">
+      <h2 class="section-title text-center">Cake Flavors & Fillings</h2>
+      <div class="cake-flavors-content" style="display: flex; justify-content: center; align-items: center;">
+        <div class="cake-flavor-image">
+          <img src="menu-img/LeoGoddess-3.png" alt="Cake Flavors and Fillings Guide"
+            style="width: 100%; max-width: 600px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); cursor: pointer;"
+            onclick="openImageModal('menu-img/LeoGoddess-3.png', 'Cake Flavors and Fillings Guide')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Cake Information Section -->
+  <section class="cake-additional">
+    <div class="container">
+      <h2 class="section-title text-center">Additional Cake Add-Ons</h2>
+      <div class="cake-additional-content" style="display: flex; justify-content: center; align-items: center;">
+        <div class="cake-additional-image">
+          <img src="menu-img/LeoGoddess-4.png" alt="Additional Cake Information Guide"
+            style="width: 100%; max-width: 600px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); cursor: pointer;"
+            onclick="openImageModal('menu-img/LeoGoddess-4.png', 'Additional Cake Information Guide')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section class="order-form-section">
+    <div class="container">
+      <div class="order-form-content">
+        <div class="order-info">
+          <h2 class="section-title">Order Your Custom Cake</h2>
+          <p class="order-description">
+            Ready to create something special? Fill out our custom cake order form and we'll get back to you within 24
+            hours with a quote and design consultation.
+          </p>
+          <div class="order-features">
+            <div class="feature">
+              <i class="fas fa-calendar-check"></i>
+              <div>
+                <h4>Advance Booking</h4>
+                <p>Book 5 days in advance for custom designs</p>
+              </div>
+            </div>
+            <div class="feature">
+              <i class="fas fa-palette"></i>
+              <div>
+                <h4>Design Consultation</h4>
+                <p>Free consultation to discuss your vision</p>
+              </div>
+            </div>
+            <div class="feature">
+              <i class="fas fa-truck"></i>
+              <div>
+                <h4>Delivery Available</h4>
+                <p>Local delivery and setup included</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-form">
+          <form id="order-form" onsubmit="submitOrder(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="order-name">Name *</label>
+                <input type="text" id="order-name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="order-email">Email *</label>
+                <input type="email" id="order-email" name="email" placeholder="your.email@example.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="order-phone">Phone *</label>
+                <input type="tel" id="order-phone" name="phone" placeholder="(908) 689-4100" required>
+              </div>
+              <div class="form-group">
+                <label for="order-date">Pickup Date *</label>
+                <input type="date" id="order-date" name="pickup-date" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="order-cake-type">Cake Type *</label>
+              <select id="order-cake-type" name="cake-type" required>
+                <option value="">Select Cake Type</option>
+                <option value="birthday">Birthday Cake</option>
+                <option value="wedding">Wedding Cake</option>
+                <option value="anniversary">Anniversary Cake</option>
+                <option value="graduation">Graduation Cake</option>
+                <option value="custom">Custom Design</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="order-description">Description *</label>
+              <textarea id="order-description" name="description"
+                placeholder="Describe your cake design, flavors, size, etc..." rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="order-inspiration">Inspiration Images (Optional)</label>
+              <input type="file" id="order-inspiration" name="inspiration-images" accept="image/*" multiple>
+              <small class="form-help">Upload photos of cakes you like or design inspiration (max 5 images)</small>
+              <div id="image-preview-container" style="margin-top: 10px; display: none;">
+                <div id="image-previews" style="display: flex; flex-wrap: wrap; gap: 10px;"></div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Submit Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Talia's Bakery</h3>
+          <p>Family-owned bakery serving Washington, NJ with fresh breads, pastries, cakes, and more.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/people/Talias-Bakery/61550837957189/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+19086894100" aria-label="Call Talia's Bakery"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Our Bakery</h4>
+          <ul>
+            <li><a href="menu-pricing.html">Bakery Menu</a></li>
+            <li><a href="custom-cakes.html">Custom Cakes</a></li>
+            <li><a href="index.html#portfolio">Gallery</a></li>
+            <li><a href="index.html#contact">Order Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Visit Us</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+            <li>217 W Washington Ave</li>
+            <li>Washington, NJ 07882</li>
+            <li><a href="tel:+19086894100">(908) 689-4100</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Talia's Bakery. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <h3 id="modalTitle"></h3>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+  <script>
+
+    // Image preview functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const fileInput = document.getElementById('order-inspiration');
+      const previewContainer = document.getElementById('image-preview-container');
+      const previewsDiv = document.getElementById('image-previews');
+
+      fileInput.addEventListener('change', function (e) {
+        const files = Array.from(e.target.files);
+
+        // Clear previous previews
+        previewsDiv.innerHTML = '';
+
+        if (files.length > 0) {
+          previewContainer.style.display = 'block';
+
+          files.slice(0, 5).forEach((file, index) => {
+            if (file.type.startsWith('image/')) {
+              const reader = new FileReader();
+              const previewDiv = document.createElement('div');
+              previewDiv.style.cssText = `
+                position: relative;
+                width: 100px;
+                height: 100px;
+                border-radius: 8px;
+                overflow: hidden;
+                border: 2px solid #e1e5e9;
+              `;
+
+              const img = document.createElement('img');
+              img.style.cssText = `
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              `;
+
+              const removeBtn = document.createElement('button');
+              removeBtn.innerHTML = '×';
+              removeBtn.style.cssText = `
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background: #e74c3c;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 1;
+              `;
+
+              removeBtn.addEventListener('click', function () {
+                previewDiv.remove();
+                if (previewsDiv.children.length === 0) {
+                  previewContainer.style.display = 'none';
+                }
+              });
+
+              reader.onload = function (e) {
+                img.src = e.target.result;
+              };
+
+              reader.readAsDataURL(file);
+              previewDiv.appendChild(img);
+              previewDiv.appendChild(removeBtn);
+              previewsDiv.appendChild(previewDiv);
+            }
+          });
+        } else {
+          previewContainer.style.display = 'none';
+        }
+      });
+    });
+
+    // Order form submission
+    async function submitOrder(e) {
+      e.preventDefault();
+
+      const form = document.getElementById('order-form');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+
+      // Show loading state
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.disabled = true;
+
+      try {
+        // Get form data
+        const formData = new FormData(form);
+        const orderData = {
+          service: 'custom-cake-order',
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          pickup_date: formData.get('pickup-date'),
+          cake_type: formData.get('cake-type'),
+          description: formData.get('description'),
+          timestamp: new Date().toISOString(),
+          status: 'new'
+        };
+
+        // Handle image uploads
+        const fileInput = document.getElementById('order-inspiration');
+        let imageFiles = [];
+
+        if (fileInput.files.length > 0) {
+          imageFiles = Array.from(fileInput.files);
+        }
+
+        // Submit to Firebase
+        const result = await firebaseService.submitInquiryWithImages(orderData, imageFiles);
+
+        showNotification('Thank you! Your order request has been sent successfully. We\'ll contact you within 24 hours.', 'success');
+        form.reset();
+        // Clear image previews
+        document.getElementById('image-preview-container').style.display = 'none';
+        document.getElementById('image-previews').innerHTML = '';
+
+      } catch (error) {
+        console.error('Firebase Error:', error);
+        showNotification('Sorry, there was an error sending your order. Please try again.', 'error');
+      } finally {
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    }
+
+    function showNotification(message, type) {
+      // Create notification element
+      const notification = document.createElement('div');
+      notification.className = `notification ${type}`;
+      notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+        z-index: 10000;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      `;
+
+      if (type === 'success') {
+        notification.style.backgroundColor = '#27ae60';
+      } else {
+        notification.style.backgroundColor = '#e74c3c';
+      }
+
+      notification.textContent = message;
+      document.body.appendChild(notification);
+
+      // Animate in
+      setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+      }, 100);
+
+      // Remove after 5 seconds
+      setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+          }
+        }, 300);
+      }, 5000);
+    }
+
+    // Image Modal Functions
+    function openImageModal(imageSrc, imageTitle) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+
+      modalImage.src = imageSrc;
+      modalImage.alt = imageTitle;
+      modalTitle.textContent = imageTitle;
+
+      modal.classList.add('show');
+      modal.style.display = 'block';
+
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('show');
+      modal.style.display = 'none';
+
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking on the close button or outside the modal
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('imageModal');
+      const closeBtn = document.querySelector('.close-modal');
+
+      closeBtn.addEventListener('click', closeImageModal);
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          closeImageModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          closeImageModal();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
