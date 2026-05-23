@@ -95,8 +95,10 @@ body {
 }
 
 .logo-img {
-  height: 50px;
+  height: 64px;
   width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .logo-icon {
@@ -2955,9 +2957,10 @@ body {
 }
 
 .logo-img {
-  height: 62px;
+  height: 64px;
   width: auto;
   display: block;
+  object-fit: contain;
 }
 
 .nav-link {
@@ -3011,7 +3014,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('new-portfolio/IMG_5588.jpeg') center/cover no-repeat;
+  background: url('img/o.jpg') center/cover no-repeat;
   padding: 120px 0 80px;
 }
 
@@ -3123,8 +3126,9 @@ body {
 }
 
 .about-image-card img {
-  max-width: 280px;
+  max-width: 320px;
   width: 100%;
+  height: auto;
   border-radius: 12px;
 }
 
@@ -3280,9 +3284,10 @@ body {
 }
 
 .footer-logo {
-  height: 90px;
+  height: 140px;
   width: auto;
   margin-bottom: 1rem;
+  object-fit: contain;
 }
 
 .social-links a {
@@ -3297,7 +3302,7 @@ body {
 }
 
 .page-hero {
-  background: linear-gradient(rgba(5, 5, 5, 0.85), rgba(11, 11, 11, 0.95)), url('new-portfolio/IMG_5588.jpeg') center/cover !important;
+  background: linear-gradient(rgba(5, 5, 5, 0.85), rgba(11, 11, 11, 0.95)), url('img/o.jpg') center/cover !important;
   padding: 140px 0 80px;
 }
 
