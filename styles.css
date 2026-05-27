@@ -1,20 +1,38 @@
 /* Reset and Base Styles */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #d8d8d8;
-  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 20px;
 }
 
@@ -71,7 +89,10 @@ body {
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  max-width: 100%;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -80,18 +101,24 @@ body {
 }
 
 .nav-container {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 0;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 45%;
 }
 
 .logo-img {
@@ -167,12 +194,17 @@ body {
   align-items: center;
   background: linear-gradient(135deg, #0b0b0b 0%, #050505 100%);
   padding: 120px 0 80px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .hero-content {
   flex: 1;
   max-width: 600px;
-  padding: 50px;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-title {
@@ -223,6 +255,13 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.about-content > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .about-description {
@@ -233,13 +272,17 @@ body {
 }
 
 .about-stats {
-  display: flex;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
   margin-top: 2rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .stat {
   text-align: center;
+  min-width: 0;
 }
 
 .stat-number {
@@ -255,6 +298,9 @@ body {
   color: #d8d8d8;
   text-transform: uppercase;
   letter-spacing: 1px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .about-image img {
@@ -272,7 +318,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -415,7 +461,7 @@ body {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -478,7 +524,7 @@ body {
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -648,7 +694,7 @@ body {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -754,7 +800,17 @@ body {
   }
 
   .about-stats {
-    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .stat-number {
+    font-size: clamp(1.15rem, 4.5vw, 2rem);
+  }
+
+  .stat-label {
+    font-size: clamp(0.6rem, 2.4vw, 0.85rem);
+    letter-spacing: 0.04em;
   }
 
   .contact-content {
@@ -862,7 +918,7 @@ html {
 
 .cake-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 3rem;
   margin-top: 3rem;
 }
@@ -947,7 +1003,7 @@ html {
 
 .flavors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1093,7 +1149,7 @@ html {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 2rem;
 }
 
@@ -1159,7 +1215,7 @@ html {
 
 .bread-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 3rem;
   margin-top: 3rem;
 }
@@ -1245,7 +1301,7 @@ html {
 
 .schedule-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1305,7 +1361,7 @@ html {
 
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1420,7 +1476,7 @@ html {
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -1702,7 +1758,7 @@ html {
 /* File Preview Styles */
 .file-preview {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -1820,7 +1876,7 @@ html {
 
   .flavors-grid,
   .events-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   }
 
   .order-form-content,
@@ -1853,7 +1909,7 @@ html {
   }
 
   .schedule-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
   }
 }
 
@@ -2015,7 +2071,7 @@ html {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 3rem;
   margin-bottom: 4rem;
 }
@@ -3016,6 +3072,9 @@ body {
   justify-content: center;
   background: url('img/o.jpg') center/cover no-repeat;
   padding: 120px 0 80px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .hero-overlay {
@@ -3028,6 +3087,8 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .hero-content {
@@ -3123,13 +3184,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .about-image-card img {
-  max-width: 320px;
+  max-width: 100%;
   width: 100%;
   height: auto;
   border-radius: 12px;
+  object-fit: contain;
 }
 
 .service-card,
@@ -3286,6 +3354,7 @@ body {
 .footer-logo {
   height: 140px;
   width: auto;
+  max-width: 100%;
   margin-bottom: 1rem;
   object-fit: contain;
 }
@@ -3373,9 +3442,77 @@ body {
 
   .hero-title {
     font-size: 2.2rem;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-eyebrow {
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
   }
 
   .logo-img {
     height: 50px;
+    max-width: 100%;
+  }
+
+  .about-image-card {
+    max-width: calc(100vw - 32px);
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .about,
+  .services,
+  .portfolio,
+  .reviews,
+  .contact,
+  .instagram-section,
+  .hero,
+  .footer {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-title {
+    overflow-wrap: anywhere;
+  }
+
+  .portfolio-item:hover {
+    transform: none;
+  }
+
+  .package-card.featured,
+  .package-card.featured:hover {
+    transform: none;
+  }
+}
+
+/* Mobile overflow — root fixes for narrow viewports (390–430px) */
+@media (max-width: 480px) {
+  .about-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+  }
+
+  .about-image-card {
+    max-width: calc(100vw - 32px);
+    padding: 1rem;
+  }
+
+  .nav-logo {
+    max-width: 55%;
   }
 }
